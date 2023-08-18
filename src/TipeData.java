@@ -10,6 +10,11 @@ public class TipeData {
 
         // NOTE: penggunaan memori = size/ukuran di dalam memori
 
+        // Tipe data primitive biasanya digunakan untuk menyimpan nilai sederhana, dan mendukung operasi
+        // MTK sederhana, seperti penjumlahan, pengurangan, perkalian, pembagian, modulus.
+        // Tipe data primitive lebih efisien dalam kecepatan akses dan penggunaan memori dari pada tipe data
+        // dalam bentuk class/objek
+
         // Byte: bilangan bulat
         // Memiliki ukuran 1 byte (8 bit)
         byte b = 8;
@@ -63,10 +68,14 @@ public class TipeData {
         // Float: bilangan desimal.
         // Float memiliki presisi/ketelitian sampai 7 angka di belakang koma.
         // Jika ingin memakai float, kamu farus menambahkan karakter "f" di akhir angka,
-        // jika tidak compiler akan mengira itu adalah integer (jika tidak ada nilai dibelakang koma) dan
-        // double (jika ada nilai dibelakang koma)
+        // jika tidak compiler akan mengira itu adalah double (di compiler java, tipe data default bilangan desimal adalah "double")
         float f1 = 7f;
         float f2 = 7.9825223f;
+        // Compiler akan menganggap "7" sebagai float walaupun tidak diberi "f" di akhir bilangan
+        // karena kita sudah memberitahu compiler kita menggunakan tipe data float
+        // Jadi, pertama compiler akan menganggap "7" bertipe data "double", tetapi karena kita menggunakan "float"
+        // sebagai tipe data untuk variable "f3", maka compiler akan secara otomatis mengkonversi "7" menjadi "float"
+        float f3 = 7;
 
         // Double: bilangan desimal.
         // Double memiliki presisi/ketelitian sampai 15 angka di belakang koma.
@@ -75,7 +84,7 @@ public class TipeData {
         double d3 = 7.98252234397801478;
         // Nilai dibawah adalah float,
         // tetapi karena kita memakai "double untuk tipe datanya,
-        // maka compiler akan menganggap nilai dibawah adalah double
+        // maka compiler akan secara otomatis mengkonversi nilai "float" menjadi "double"
         double d4 = 7.317836f;
 
         // Kesimpulan
@@ -97,6 +106,7 @@ public class TipeData {
 
         // Untuk tipe data karakter, harus memakai single quote => '' <=
         // Jika memakai double quote, maka compiler akan menganggap itu adalah String
+        // Setiap karakter memiliki kode dari 0 sampai 127, bisa dilihat di https://theasciicode.com.ar/
         // penggunaan memori => sistem 32-bit: 1 byte
         //                      sistem 64-bit: 1 byte
         char c = 'a';
