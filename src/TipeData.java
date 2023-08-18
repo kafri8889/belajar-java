@@ -167,7 +167,7 @@ public class TipeData {
         BigInteger perkalianInt = bigInteger1.multiply(bigInteger2);
 
         // Big decimal adalah class untuk mengkalkulasi angka desimal dengan tingkat ketelitian/presisi yang lebih besar.
-        // Contoh nilai dibawah lebih besar dari Long.MAX_VALUE
+        // Contoh nilai dibawah memiliki angka dibelakang koma yang lebih besar dari 15
         BigDecimal bigDecimal1 = new BigDecimal("9223372429784.8203685477580743947387");
         BigDecimal bigDecimal2 = new BigDecimal("3468.25353543534568678697854775807");
         BigDecimal penjumlahanDec = bigDecimal1.add(bigDecimal2);
