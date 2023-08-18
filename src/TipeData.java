@@ -14,20 +14,20 @@ public class TipeData {
         // Memiliki ukuran 1 byte (8 bit)
         byte b = 8;
 
-        // Short sama seperti byte, bedanya memiliki nilai maksumum, minimum, dan
-        // penggunaan memori yang sedikit lebih besar/
+        // Short sama seperti byte, bedanya memiliki nilai maksimum, minimum, dan
+        // penggunaan memori yang sedikit lebih besar
         // Nilai minumum: -32_768
         // Nilai maksimum: 32_767
         short s = 6;
 
         // Integer sama seperti short (bilangan bulat juga), bedanya integer memiliki nilai maksimum
         // dan minimum yang sedikit lebih besar, dan penggunaan memorinya juga/
-        // Nilai minimum yaitu: -2_147_483_648
-        // Nilai maksimum yaitu: 2_147_483_647
+        // Nilai minimum: -2_147_483_648
+        // Nilai maksimum: 2_147_483_647
         int i = -123456789;
 
         // Long sama seperti integer (bilangan bulat juga), bedanya long memiliki nilai maksimum
-        // dan minimum yang lebih panjang, tetapi penggunaan memorinya juga lebih besar.
+        // dan minimum yang lebih besar, tetapi penggunaan memorinya juga lebih besar.
         // Jika kamu ingin menggunakan tipe data long, kamu harus menambahkan karakter "L" di akhir bilangan,
         // Jika tidak, compiler akan mengira tipe data tersebut adalah Integer
         // Nilai minimum: -9_223_372_036_854_775_808
