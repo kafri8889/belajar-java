@@ -179,6 +179,13 @@ public class TipeData {
 
         // ---------------------- Tipe data array ----------------------------------------
 
+        // Tata cara penulisan array
+        // 1) tipe_data[] nama_variabel;
+        // 2) tipe_data[] nama_variabel = new tipe_data[size];
+        // 3) tipe_data[] nama_variabel = new tipe_data[size];
+        // 4) tipe_data[] nama_variabel = {value1, value2, dst};
+        // 5) tipe_data[] nama_variabel = new tipe_data[]{value1, value2, dst};
+
         // Membuat char array dengan size 5
         char[] carr1 = new char[5];
         // Membuat char array dengan nilai yang diberikan
