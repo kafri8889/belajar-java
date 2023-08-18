@@ -185,7 +185,7 @@ public class TipeData {
         char[] carr3 = {'a', 'b'};
         // Mengisi array dengan index
         carr1[0] = 'a';
-        // Mengisi array dengan class Arrays
+        // Mengisi array dengan function "fill" dari class Arrays
         Arrays.fill(carr1, 'a'); // ['a', 'a', 'a', 'a', 'a']
 
         // Array lain
