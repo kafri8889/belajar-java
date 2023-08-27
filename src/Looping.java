@@ -178,4 +178,61 @@ public class Looping {
 
     }
 
+
+
+	// ------------------------------- Rekrusi --------------------------------
+
+	// Rekrusi adalah function yang memanggil dirinya sendiri
+
+	// Contoh:
+	// Jika kita menjalankan kode dibawah, function "printString" akan dipanggil terus menerus,
+	// dan tidak akan berhenti sampai melempar error "StackOverflowError".
+	// alur:
+	// step 1 => print "love java" ke console
+	// step 2 => panggil fungsi "printString()", ulangi dari step 1
+	public static void printString() {
+		System.out.println("love java");
+		printString();
+	}
+
+	// Untuk menghentikan perulangan rekrusi, kita bisa menggunakan kata kunci "return"
+	// Contoh:
+	// Jika kita menjalankan fungsi tersebut dengan n = 3, maka "love java" akan dicetak sebanyak 3 kali
+	// Output dari "printString(4)":
+	// ```
+	// love java
+	// love java
+	// love java
+	// love java
+	// ```
+	/**
+	 * @param n berapa kali function ini dijalankan
+	 */
+	public static void printString(int n) {
+		if (n <= 0) return; // Jika n lebih kecil atau sama dengan nol, hentikan perulangan
+		System.out.println("love java");
+		printString(n - 1);
+	}
+
+	// Contoh lain yaitu mencari nilai faktorial dari sebuah angka
+	// Rumus faktorial adalah:
+	// f(n) = (n) * (n - 1) * (n - 2) * ... * (n - (n - 1))
+	// Contoh faktorial dari 5 adalah 120, karena
+	// 5! = 5 x 4 x 3 x 2 x 1 = 120
+	public static int faktorial(int n) {
+		// Jika n sama dengan 0, maka kita return 1,
+		// karena faktorial dari 0 adalah 1
+		if (n == 0) return 1;
+		// Kalikan n dengan faktorial n - 1
+		else return n * faktorial(n - 1);
+	}
+
+	// alur dari kode diatas adalah
+	// f(5) => 5 * 4
+	// f(4) => 4 * 3
+	// f(3) => 3 * 2
+	// f(2) => 2 * 1
+	// f(1) => 1 * 1 (ingat, faktorial dari 0 adalah 1)
+	// Maka didapat "5 x 4 x 3 x 2 x 1"
+
 }
